@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Registrasi KTP - Sistem Data KTP</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="top-left">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Logo Sistem Data KTP">
+      <span><b>Sistem Data KTP</b><small>Dukcapil Terpadu Nasional</small></span>
+    </a>
+    <span class="live">Layanan Aktif</span>
+  </div>
+  <div class="search">
+    <span class="ms">search</span>
+    <input type="search" placeholder="Cari NIK (16 digit) atau Nama Lengkap Penduduk..." aria-label="Cari penduduk">
+  </div>
+  <div class="user">
+    <img src="petugas.jpg" alt="Foto petugas">
+    <div><b>Revalsa Putra</b><small>Admin</small></div>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <div>
+    <span class="side-label">Menu Navigasi</span>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="index.html"><span class="ms">dashboard</span>Halaman Utama</a>
+      <a href="data-ktp.html"><span class="ms">badge</span>Data KTP</a>
+      <a href="form-ktp.html" class="active" aria-current="page"><span class="ms">how_to_reg</span>Form Registrasi KTP</a>
+    </nav>
+  </div>
+  <div class="side-note">
+    <b><span class="ms" style="font-size:18px">verified_user</span>SIAK Terintegrasi</b>
+    <p>Basis data kependudukan sinkron dengan server pusat Kemendagri.</p>
+  </div>
+</aside>
+
+<main class="main">
+<section class="page-head">
+  <div>
+    <span class="pill"><span class="ms">app_registration</span>Pelayanan Administrasi Kependudukan</span>
+    <h1>Form Registrasi KTP</h1>
+    <p>Pendaftaran dan pemutakhiran data kependudukan digital warga negara terintegrasi SIAK Pusat.</p>
+  </div>
+  <a class="btn soft" href="data-ktp.html"><span class="ms">badge</span>Lihat Data KTP</a>
+</section>
+
+<nav class="steps" aria-label="Langkah pengisian">
+  <a href="#identitas"><i>1</i><span><small>Langkah 01</small><b>Identitas Diri</b><span>NIK &amp; Biodata Pemohon</span></span></a>
+  <a href="#alamat"><i>2</i><span><small>Langkah 02</small><b>Alamat &amp; Domisili</b><span>RT, RW, Desa, Kecamatan</span></span></a>
+  <a href="#status"><i>3</i><span><small>Langkah 03</small><b>Status &amp; Legalitas</b><span>Status, Foto &amp; Berkas</span></span></a>
+</nav>
+
+<form class="form-layout" action="data-ktp.html" method="get">
+  <div class="col">
+
+    <section class="fcard" id="identitas">
+      <div class="fhead"><i>1</i><div><h2>Identitas Diri Pemohon</h2><p>Sesuai dengan Akta Kelahiran dan Kartu Keluarga terbitan Kemendagri</p></div></div>
+      <div class="field">
+        <label for="nik">Nomor Induk Kependudukan (NIK) <em>*</em></label>
+        <div class="in"><span class="ms">badge</span><input class="mono" id="nik" name="nik" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" placeholder="3171012345678901" title="Isi 16 digit angka" required></div>
+        <span class="hint">Kombinasi 16 angka wilayah, tanggal lahir, dan urutan registrasi.</span>
+      </div>
+      <div class="field">
+        <label for="nama">Nama Lengkap (Sesuai Akta Kelahiran) <em>*</em></label>
+        <div class="in"><span class="ms">person</span><input id="nama" name="nama" placeholder="Contoh: MUHAMMAD RIZKY PRATAMA" required></div>
+        <span class="hint">Hindari gelar akademis atau gelar kehormatan pada kolom nama KTP dasar.</span>
+      </div>
+      <div class="g2">
+        <div class="field"><label for="tempat">Tempat Lahir <em>*</em></label><div class="in"><span class="ms">location_city</span><input id="tempat" name="tempat_lahir" placeholder="Contoh: Jakarta" required></div></div>
+        <div class="field"><label for="tgl">Tanggal Lahir <em>*</em></label><input class="date" style="height:40px;width:100%;border-color:transparent;background:var(--low);border-radius:12px" id="tgl" name="tanggal_lahir" type="date" required></div>
+      </div>
+      <div class="field"><span class="lbl">Jenis Kelamin <em>*</em></span><div class="opts"><label><input type="radio" name="jenis_kelamin" value="Laki-Laki" required><span>Laki-Laki</span></label><label><input type="radio" name="jenis_kelamin" value="Perempuan"><span>Perempuan</span></label></div></div>
+      <div class="field"><span class="lbl">Golongan Darah <em>*</em></span><div class="opts"><label><input type="radio" name="gol_darah" value="A" required><span>A</span></label><label><input type="radio" name="gol_darah" value="B"><span>B</span></label><label><input type="radio" name="gol_darah" value="AB"><span>AB</span></label><label><input type="radio" name="gol_darah" value="O"><span>O</span></label><label><input type="radio" name="gol_darah" value="-"><span>TIDAK TAHU</span></label></div></div>
+    </section>
+
+    <section class="fcard" id="alamat">
+      <div class="fhead"><i>2</i><div><h2>Alamat &amp; Domisili Legal</h2><p>Tempat tinggal sah penduduk berdasarkan kode wilayah Kemendagri</p></div></div>
+      <div class="field"><label for="alm">Alamat Lengkap Jalan / Gedung / Blok <em>*</em></label><textarea id="alm" name="alamat" rows="3" placeholder="Contoh: Jl. Merdeka Timur No. 45, Kompleks Perumahan Graha Lestari Blok C2" required></textarea></div>
+      <div class="g2">
+        <div class="field"><span class="lbl">Rukun Tetangga (RT) &amp; Rukun Warga (RW) <em>*</em></span>
+          <div class="rtrw"><div class="in"><span class="ms" style="font-size:12px;top:14px;font-weight:600">RT</span><input name="rt" maxlength="3" pattern="[0-9]{3}" placeholder="001" aria-label="RT" title="3 digit angka" required></div><b>/</b><div class="in"><span class="ms" style="font-size:12px;top:14px;font-weight:600">RW</span><input name="rw" maxlength="3" pattern="[0-9]{3}" placeholder="008" aria-label="RW" title="3 digit angka" required></div></div>
+          <span class="hint">Format 3 digit angka (contoh: 005)</span></div>
+        <div class="field"><label for="pos">Kode Pos Wilayah</label><div class="in"><span class="ms">markunread_mailbox</span><input id="pos" name="kode_pos" inputmode="numeric" maxlength="5" pattern="[0-9]{5}" placeholder="Contoh: 10110"></div><span class="hint">5 digit kode pos Indonesia</span></div>
+      </div>
+      <div class="g2">
+        <div class="field"><label for="kel">Kelurahan / Desa <em>*</em></label><div class="in"><span class="ms">holiday_village</span><input id="kel" name="kel_desa" placeholder="Contoh: Gambir" required></div></div>
+        <div class="field"><label for="kec">Kecamatan <em>*</em></label><div class="in"><span class="ms">domain</span><input id="kec" name="kecamatan" placeholder="Contoh: Gambir" required></div></div>
+      </div>
+    </section>
+
+    <section class="fcard" id="status">
+      <div class="fhead"><i>3</i><div><h2>Data Status &amp; Kependudukan</h2><p>Status sipil, keyakinan, profesi, dan masa berlaku KTP</p></div></div>
+      <div class="g2">
+        <div class="field"><label for="agama">Agama <em>*</em></label><div class="in"><span class="ms">temple_buddhist</span><select id="agama" name="agama"><option>Islam</option><option>Kristen</option><option>Katolik</option><option>Hindu</option><option>Buddha</option><option>Konghucu</option><option value="Kepercayaan">Penghayat Kepercayaan</option></select><span class="ms arrow">expand_more</span></div></div>
+        <div class="field"><label for="kawin">Status Perkawinan <em>*</em></label><div class="in"><span class="ms">favorite</span><select id="kawin" name="status_perkawinan"><option>Belum Kawin</option><option>Kawin</option><option>Cerai Hidup</option><option>Cerai Mati</option></select><span class="ms arrow">expand_more</span></div></div>
+      </div>
+      <div class="g2">
+        <div class="field"><label for="kerja">Pekerjaan <em>*</em></label><div class="in"><span class="ms">work</span><input id="kerja" name="pekerjaan" placeholder="Contoh: Karyawan Swasta" required></div></div>
+        <div class="field"><span class="lbl">Kewarganegaraan <em>*</em></span><div class="opts"><label><input type="radio" name="kewarganegaraan" value="WNI" required checked><span>WNI</span></label><label><input type="radio" name="kewarganegaraan" value="WNA"><span>WNA (ITAS/ITAP)</span></label></div></div>
+      </div>
+      <div class="field"><span class="lbl">Masa Berlaku KTP-el <em>*</em></span>
+        <div class="opts berlaku">
+          <label><input type="radio" name="berlaku" value="Seumur Hidup" checked><span><b>SEUMUR HIDUP</b><small>Sesuai UU No. 24 Tahun 2013 Pasal 64 ayat 7</small></span></label>
+          <label><input type="radio" name="berlaku" value="Tanggal"><span><b>Tanggal Khusus</b><small>Khusus WNA (isi tanggal di bawah)</small></span></label>
+        </div>
+        <input class="date" type="date" name="tanggal_berlaku"
+            aria-label="Tanggal berlaku khusus"
+            style="width:100%">
+      </div>
+      <div class="field"><span class="lbl">Unggah Berkas Persyaratan Digital</span><span class="hint">Format JPEG, PNG atau PDF maks. 5 MB per berkas</span>
+        <div class="uploads" style="margin-top:8px">
+          <label class="up"><span class="ms">add_a_photo</span><b>Pasfoto Resmi 4x6</b><small>Latar Merah (Ganjil) / Biru (Genap)</small><input type="file" name="foto" accept="image/jpeg,image/png"></label>
+          <label class="up"><span class="ms">cloud_upload</span><b>Kartu Keluarga &amp; Akta</b><small>Scan dokumen asli resolusi 300dpi</small><input type="file" name="dokumen" accept="application/pdf,image/jpeg,image/png"></label>
+        </div>
+      </div>
+      <label class="agree"><input type="checkbox" name="pernyataan" required>Saya menyatakan dengan sesungguhnya bahwa seluruh data kependudukan yang saya isi dan berkas yang dilampirkan adalah benar dan sah menurut hukum yang berlaku di Negara Kesatuan Republik Indonesia.</label>
+      <div class="actions">
+        <button class="btn soft" type="reset"><span class="ms">restart_alt</span>Reset Form</button>
+        <button class="btn" type="submit"><span class="ms">how_to_reg</span>Submit Pendaftaran KTP</button>
+      </div>
+    </section>
+  </div>
+
+</form>
+</main>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Logo Sistem Data KTP">
+        <span><b>Sistem Data KTP</b><small>Dukcapil Terpadu Nasional</small></span>
+      </a>
+      <p>Sistem administrasi kependudukan untuk melihat data dan mendaftarkan Kartu Tanda Penduduk secara terintegrasi dan akurat.</p>
+    </div>
+    <nav aria-label="Menu footer">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="index.html">Halaman Utama</a></li>
+        <li><a href="data-ktp.html">Data KTP</a></li>
+        <li><a href="form-ktp.html">Form Registrasi KTP</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h3>Informasi</h3>
+      <ul>
+        <li>Layanan Kependudukan Terpadu</li>
+        <li>Perlindungan data sesuai UU PDP No. 27/2022</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 Sistem Data KTP. Hak cipta dilindungi.</span>
+    <span>SIAK Terintegrasi dengan server pusat Kemendagri</span>
+  </div>
+</footer>
+
+</body>
+</html>

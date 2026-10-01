@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data KTP - Sistem Data KTP</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="top-left">
+    <a class="brand" href="index.html">
+      <img src="logo.svg" alt="Logo Sistem Data KTP">
+      <span><b>Sistem Data KTP</b><small>Dukcapil Terpadu Nasional</small></span>
+    </a>
+    <span class="live">Layanan Aktif</span>
+  </div>
+  <div class="search">
+    <span class="ms">search</span>
+    <input type="search" placeholder="Cari NIK (16 digit) atau Nama Lengkap Penduduk..." aria-label="Cari penduduk">
+  </div>
+  <div class="user">
+    <img src="petugas.jpg" alt="Foto petugas">
+    <div><b>Revalsa Putra</b><small>Admin</small></div>
+  </div>
+</header>
+
+<aside class="sidebar">
+  <div>
+    <span class="side-label">Menu Navigasi</span>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="index.html"><span class="ms">dashboard</span>Halaman Utama</a>
+      <a href="data-ktp.html" class="active" aria-current="page"><span class="ms">badge</span>Data KTP</a>
+      <a href="form-ktp.html"><span class="ms">how_to_reg</span>Form Registrasi KTP</a>
+    </nav>
+  </div>
+  <div class="side-note">
+    <b><span class="ms" style="font-size:18px">verified_user</span>SIAK Terintegrasi</b>
+    <p>Basis data kependudukan sinkron dengan server pusat Kemendagri.</p>
+  </div>
+</aside>
+
+<main class="main">
+<nav class="crumb" aria-label="Breadcrumb"><a href="index.html">Beranda</a> / <b>Data KTP</b> / <code>3273010101010001</code></nav>
+<section class="page-head">
+  <div>
+    <h1>Katalog Data KTP Penduduk</h1>
+    <p>Data kependudukan digital dan penerbitan KTP-el nasional.</p>
+  </div>
+  <div class="btns">
+    <a class="btn soft" href="index.html"><span class="ms">arrow_back</span>Halaman Utama</a>
+    <a class="btn" href="form-ktp.html"><span class="ms">person_add</span>Registrasi KTP Baru</a>
+  </div>
+</section>
+
+<div class="data-grid">
+  <div>
+    <article class="ktp" aria-label="Kartu Tanda Penduduk">
+      <div class="ttl"><b>Republik Indonesia</b>Provinsi Jawa Barat<br>Kota Bekasi</div>
+      <div class="nik"><span>NIK</span><code>3273010101010001</code></div>
+      <div class="body">
+        <dl>
+          <dt>Nama</dt><dd>Max Verstappen</dd>
+          <dt>Tempat/Tgl Lahir</dt><dd>Bekasi, 30-09-1996</dd>
+          <dt>Jenis Kelamin</dt><dd>Laki-Laki &nbsp; Gol: O</dd>
+          <dt>Alamat</dt><dd>Bekasi Barat</dd>
+          <dt>RT/RW</dt><dd>001/002</dd>
+          <dt>Kel/Desa</dt><dd>Bekasi</dd>
+          <dt>Kecamatan</dt><dd>Bekasi</dd>
+          <dt>Agama</dt><dd>Islam</dd>
+          <dt>Status Kawin</dt><dd>Belum Kawin</dd>
+          <dt>Pekerjaan</dt><dd>Mahasiswa</dd>
+          <dt>Kewarganegaraan</dt><dd>WNI</dd>
+          <dt>Berlaku Hingga</dt><dd>Seumur Hidup</dd>
+        </dl>
+        <div class="photo"><img src="max-verstapen.jpg" alt="Foto Max Verstappen"><span class="ok"><span class="ms">check</span></span></div>
+      </div>
+      <footer><span>ICAO 9303 / ISO 7810</span><b>CHIP AKTIF</b></footer>
+    </article>
+    <section class="card quick">
+      <h2>Aksi Cepat</h2>
+      <div class="btns">
+        <a class="btn soft" href="form-ktp.html"><span class="ms">edit_note</span>Isi Form KTP</a>
+        <a class="btn soft" href="index.html"><span class="ms">dashboard</span>Beranda</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="tabs">
+    <input type="radio" name="tab" id="t1" checked>
+    <input type="radio" name="tab" id="t2">
+    <input type="radio" name="tab" id="t3">
+    <div class="tab-labels">
+      <label for="t1"><span class="ms">badge</span>Informasi Pribadi</label>
+      <label for="t2"><span class="ms">location_on</span>Informasi Domisili</label>
+      <label for="t3"><span class="ms">family_restroom</span>Status Kependudukan</label>
+    </div>
+
+    <div class="panel p1">
+      <h2>Biodata Utama Penduduk</h2>
+      <dl class="kv">
+        <dt>NIK</dt><dd><code>3273010101010001</code></dd>
+        <dt>Nama Lengkap</dt><dd>Max Verstappen</dd>
+        <dt>Tempat, Tanggal Lahir</dt><dd>Bekasi, 30 September 1996</dd>
+        <dt>Jenis Kelamin</dt><dd>Laki-Laki</dd>
+        <dt>Golongan Darah</dt><dd>O</dd>
+        <dt>Agama</dt><dd>Islam</dd>
+      </dl>
+    </div>
+
+    <div class="panel p2">
+      <h2>Alamat &amp; Wilayah Administratif</h2>
+      <div class="boxes">
+        <div><small>Alamat</small><b>Bekasi Barat</b><span>RT 001 / RW 002</span></div>
+        <div><small>Kelurahan / Desa</small><b>Bekasi</b></div>
+        <div><small>Kecamatan</small><b>Bekasi</b></div>
+        <div><small>Kota</small><b>Kota Bekasi</b><span>Provinsi Jawa Barat</span></div>
+      </div>
+    </div>
+
+    <div class="panel p3">
+      <h2>Status Kependudukan</h2>
+      <dl class="kv">
+        <dt>Status Perkawinan</dt><dd>Belum Kawin</dd>
+        <dt>Pekerjaan</dt><dd>Mahasiswa</dd>
+        <dt>Kewarganegaraan</dt><dd>WNI (Warga Negara Indonesia)</dd>
+        <dt>Berlaku Hingga</dt><dd>Seumur Hidup</dd>
+        <dt>Status Data</dt><dd><span class="badge">Terverifikasi</span></dd>
+      </dl>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="foot-grid">
+    <div>
+      <a class="brand" href="index.html">
+        <img src="logo.svg" alt="Logo Sistem Data KTP">
+        <span><b>Sistem Data KTP</b><small>Dukcapil Terpadu Nasional</small></span>
+      </a>
+      <p>Sistem administrasi kependudukan untuk melihat data dan mendaftarkan Kartu Tanda Penduduk secara terintegrasi dan akurat.</p>
+    </div>
+    <nav aria-label="Menu footer">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="index.html">Halaman Utama</a></li>
+        <li><a href="data-ktp.html">Data KTP</a></li>
+        <li><a href="form-ktp.html">Form Registrasi KTP</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h3>Informasi</h3>
+      <ul>
+        <li>Layanan Kependudukan Terpadu</li>
+        <li>Perlindungan data sesuai UU PDP No. 27/2022</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>&copy; 2026 Sistem Data KTP. Hak cipta dilindungi.</span>
+    <span>SIAK Terintegrasi dengan server pusat Kemendagri</span>
+  </div>
+</footer>
+
+</body>
+</html>
