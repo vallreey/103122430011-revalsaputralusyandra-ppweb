@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 20px;
+}
+
+.ringkasan {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.kotak-ringkasan {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.kotak-ringkasan .label {
+  display: block;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.kotak-ringkasan .angka {
+  font-size: 24px;
+}
+
+.form-peserta {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.baris-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.baris-form label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+input,
+select {
+  padding: 8px 10px;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #3b82f6;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+.tombol-batal {
+  background-color: #6b7280;
+  margin-left: 8px;
+}
+
+.tombol-batal:hover {
+  background-color: #4b5563;
+}
+
+.pesan-error {
+  color: #b91c1c;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter input {
+  flex: 1;
+}
+
+.daftar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item-peserta {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.item-peserta p {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+
+.item-peserta .nama {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.status-hadir {
+  color: #15803d;
+  font-weight: bold;
+}
+
+.status-belum {
+  color: #b45309;
+  font-weight: bold;
+}
+
+.tindakan {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tombol-hapus {
+  background-color: #dc2626;
+}
+
+.tombol-hapus:hover {
+  background-color: #b91c1c;
+}
+
+.tombol-kehadiran {
+  background-color: #16a34a;
+}
+
+.tombol-kehadiran:hover {
+  background-color: #15803d;
+}
+
+.kosong {
+  text-align: center;
+  color: #6b7280;
+  background-color: #ffffff;
+  border: 1px dashed #9ca3af;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .ringkasan {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter {
+    flex-direction: column;
+  }
+}
